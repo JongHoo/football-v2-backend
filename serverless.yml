@@ -7,21 +7,22 @@
 # The `service` block is the name of the service
 service: football-v2-backend
 
-frameworkVersion: '2'
-
 # The `provider` block defines where your service will be deployed
 provider:
   name: aws
   runtime: nodejs14.x
   region: ap-northeast-2
 
+plugins:
+  - serverless-offline
+
 # The `functions` block defines what code to deploy
 functions:
-  helloWorld:
-    handler: handler.helloWorld
+  updateStandings:
+    handler: src/standings/updateStandingsHandler.handler
     # The `events` block defines how to trigger the handler.helloWorld code
     events:
       - http:
-          path: hello-world
-          method: get
+          path: update-standings
+          method: post
           cors: true

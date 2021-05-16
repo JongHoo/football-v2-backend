@@ -18,7 +18,8 @@
   "homepage": "https://github.com/JongHoo/football-v2-backend#readme",
   "dependencies": {
     "axios": "^0.21.1",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "mongoose": "^5.12.9"
   },
   "devDependencies": {
     "serverless": "^1.47.0",

@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c6994f6-8d01-4291-8f1c-6a935e2c31ee" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/models/topScorer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/top-scorers/query.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/top-scorers/updateTopScorersHandler.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverless.yml" beforeDir="false" afterPath="$PROJECT_DIR$/serverless.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/standings/updateStandingsHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/standings/updateStandingsHandler.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +40,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/top-scorers" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -49,6 +51,12 @@
     <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/top-scorers" />
+      <recent name="$PROJECT_DIR$/src/models" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -58,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1621154260818</updated>
       <workItem from="1621154262059" duration="4408000" />
-      <workItem from="1623411566320" duration="1664000" />
+      <workItem from="1623411566320" duration="4229000" />
     </task>
     <task id="LOCAL-00001" summary="get standing data from rapid-api">
       <created>1621154431317</created>
@@ -74,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621158288728</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="response 메세지 변경">
+      <created>1623413478755</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1623413478755</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -83,6 +98,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="get standing data from rapid-api" />
     <MESSAGE value="delete &amp; insert new Standing Info" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete &amp; insert new Standing Info" />
+    <MESSAGE value="response 메세지 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="response 메세지 변경" />
   </component>
 </project>

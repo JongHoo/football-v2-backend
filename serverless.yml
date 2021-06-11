@@ -24,3 +24,11 @@ functions:
           path: standings
           method: post
           cors: true
+
+  updateTopScorers:
+    handler: src/top-scorers/updateTopScorersHandler.handler
+    events:
+      - http:
+          path: topscorers
+          method: post
+          cors: true

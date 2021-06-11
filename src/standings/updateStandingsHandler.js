@@ -55,19 +55,15 @@ module.exports.handler = async function (event) {
     console.log('Delete old Data Success')
     const insertedStandings = await Query.createStandings(newStandingList)
     console.log('Success! Data : ', insertedStandings)
+
+    return {
+      statusCode: 200,
+      body: "Update Standings Success!"
+    }
   } catch (e) {
-    responseData = {
-      message: e.message
+    return {
+      statusCode: 200,
+      body: e.message
     }
   }
-
-  const response = {
-    statusCode: 200,
-    headers: {
-      'Access-Control-Allow-Origin': '*', // Required for CORS support to work
-    },
-    body: JSON.stringify(responseData),
-  };
-
-  return response;
 }

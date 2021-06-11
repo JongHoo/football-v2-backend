@@ -16,13 +16,11 @@ provider:
 plugins:
   - serverless-offline
 
-# The `functions` block defines what code to deploy
 functions:
   updateStandings:
     handler: src/standings/updateStandingsHandler.handler
-    # The `events` block defines how to trigger the handler.helloWorld code
     events:
       - http:
-          path: update-standings
+          path: standings
           method: post
           cors: true

@@ -8,6 +8,8 @@ const Query = require('./query')
 
 module.exports.handler = async function (event) {
   const {season, league} = JSON.parse(event.body)
+  console.log('league :::', league)
+  console.log('season :::', season)
   let responseData = {}
   try {
     let {data} = await axios({

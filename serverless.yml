@@ -1,13 +1,5 @@
-# Welcome to serverless. Read the docs
-# https://serverless.com/framework/docs/
-
-# Serverless.yml is the configuration the CLI
-# uses to deploy your code to your provider of choice
-
-# The `service` block is the name of the service
 service: football-v2-backend
 
-# The `provider` block defines where your service will be deployed
 provider:
   name: aws
   runtime: nodejs14.x
@@ -30,5 +22,13 @@ functions:
     events:
       - http:
           path: topscorers
+          method: post
+          cors: true
+
+  updateFixtures:
+    handler: src/fixtures/updateFixturesHandler.handler
+    events:
+      - http:
+          path: fixtures
           method: post
           cors: true

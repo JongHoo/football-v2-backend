@@ -1,7 +1,7 @@
 const TopScorer = require('../models/topScorer')
 
 module.exports.deleteTopScorers = (league, season) => {
-  return TopScorer.deleteMany({leagueName: league, season: season})
+  return TopScorer.deleteMany({ leagueName: league, season: season })
 }
 
 module.exports.createTopScorers = (topScorerList) => {
@@ -14,4 +14,3 @@ module.exports.readTopScorers = (league, season) => {
     .where('season').equals(season)
     .sort('rank')
 }
-

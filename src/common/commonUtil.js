@@ -8,16 +8,16 @@ const connect = async () => {
     connection = await mongoose.connect('mongodb+srv://admin:dnjstnd1@freecluster-lbn7j.mongodb.net/football-v2?retryWrites=true', { useNewUrlParser: true })
     console.log('Atlas Connected!')
   } catch (err) {
-    throw err
+    return Promise.reject(err)
   }
 }
 
 const createResponse = (status, body) => ({
   statusCode: status,
   headers: {
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Headers": "Content-Type",
-    "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
   },
   body: JSON.stringify(body)
 })

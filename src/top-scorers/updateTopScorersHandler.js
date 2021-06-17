@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 const axios = require('axios')
 const { isEmpty } = require('lodash')
 const TopScorer = require('../models/topScorer')
@@ -7,20 +7,20 @@ const apiMapper = require('../common/apiMapper')
 const Query = require('./query')
 
 module.exports.handler = async function (event) {
-  const {season, league} = JSON.parse(event.body)
+  const { season, league } = JSON.parse(event.body)
   console.log('league :::', league)
   console.log('season :::', season)
   let responseData = {}
   try {
-    let {data} = await axios({
+    const { data } = await axios({
       method: 'get',
       url: 'https://api-football-v1.p.rapidapi.com/v3/players/topscorers',
       headers: {
         'x-rapidapi-host': 'api-football-v1.p.rapidapi.com',
         'x-rapidapi-key': 'dda81ea678msh94cace57ca66dc8p170996jsnca5b39b80f05',
-        'useQueryString': true
+        useQueryString: true
       },
-      params: {season, league: apiMapper.LEAGUE[league]}
+      params: { season, league: apiMapper.LEAGUE[league] }
     })
 
     if (!isEmpty(data.errors)) {
@@ -62,7 +62,7 @@ module.exports.handler = async function (event) {
 
     return {
       statusCode: 200,
-      body: "Update Top Scorers Success!"
+      body: 'Update Top Scorers Success!'
     }
   } catch (e) {
     return {

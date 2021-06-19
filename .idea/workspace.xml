@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c6994f6-8d01-4291-8f1c-6a935e2c31ee" name="Default Changelist" comment="Fixture 데이터 저장">
-      <change afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
+    <list default="true" id="8c6994f6-8d01-4291-8f1c-6a935e2c31ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/commonUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/commonUtil.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +69,7 @@
       <workItem from="1621154262059" duration="4408000" />
       <workItem from="1623411566320" duration="4535000" />
       <workItem from="1623584124013" duration="4446000" />
-      <workItem from="1623930945471" duration="1895000" />
+      <workItem from="1623930945471" duration="3150000" />
     </task>
     <task id="LOCAL-00001" summary="get standing data from rapid-api">
       <created>1621154431317</created>
@@ -110,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623588058797</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="apply eslint (standard)">
+      <created>1623933174553</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1623933174553</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,7 +125,8 @@
     <MESSAGE value="response 메세지 변경" />
     <MESSAGE value="Top-Scorer 데이터 저장" />
     <MESSAGE value="Fixture 데이터 저장" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixture 데이터 저장" />
+    <MESSAGE value="apply eslint (standard)" />
+    <option name="LAST_COMMIT_MESSAGE" value="apply eslint (standard)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

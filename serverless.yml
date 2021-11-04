@@ -17,6 +17,14 @@ functions:
           method: post
           cors: true
 
+  readStandings:
+    handler: src/standings/readStandingsHandler.handler
+    events:
+      - http:
+          path: standings/{league}/{season}
+          method: get
+          cors: true
+
   updateTopScorers:
     handler: src/top-scorers/updateTopScorersHandler.handler
     events:
@@ -25,10 +33,26 @@ functions:
           method: post
           cors: true
 
+  readTopScorers:
+    handler: src/top-scorers/readTopScorersHandler.handler
+    events:
+      - http:
+          path: topscorers/{league}/{season}
+          method: get
+          cors: true
+
   updateFixtures:
     handler: src/fixtures/updateFixturesHandler.handler
     events:
       - http:
           path: fixtures
           method: post
+          cors: true
+
+  readFixtures:
+    handler: src/fixtures/readFixturesHandler.handler
+    events:
+      - http:
+          path: fixtures/{league}/{season}/{option}
+          method: get
           cors: true

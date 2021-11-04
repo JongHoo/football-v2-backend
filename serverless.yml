@@ -11,6 +11,7 @@ plugins:
 functions:
   updateStandings:
     handler: src/standings/updateStandingsHandler.handler
+    timeout: 30
     events:
       - http:
           path: standings
@@ -27,6 +28,7 @@ functions:
 
   updateTopScorers:
     handler: src/top-scorers/updateTopScorersHandler.handler
+    timeout: 30
     events:
       - http:
           path: topscorers
@@ -43,6 +45,7 @@ functions:
 
   updateFixtures:
     handler: src/fixtures/updateFixturesHandler.handler
+    timeout: 30
     events:
       - http:
           path: fixtures

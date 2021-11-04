@@ -12,5 +12,5 @@ module.exports.readTopScorers = (league, season) => {
   return TopScorer.find()
     .where('leagueName').equals(league)
     .where('season').equals(season)
-    .sort('rank')
+    .sort('-goals')
 }

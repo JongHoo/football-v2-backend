@@ -13,6 +13,7 @@ module.exports.readFixturesByRound = (league, season, round) => {
     .where('leagueName').equals(league)
     .where('season').equals(season)
     .where('round').equals(round)
+    .sort('round')
 }
 
 module.exports.readFixturesByTeam = (league, season, team) => {
@@ -20,4 +21,5 @@ module.exports.readFixturesByTeam = (league, season, team) => {
     .where('leagueName').equals(league)
     .where('season').equals(season)
     .or([{ homeTeam: team }, { awayTeam: team }])
+    .sort('round')
 }

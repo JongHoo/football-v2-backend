@@ -34,10 +34,9 @@ module.exports.handler = async function (event) {
     const newFixtureList = []
     await commonUtil.connect()
     responseData.forEach(data => {
-      // 분데스리가 승강 플레이오프는 일단 제외
-      const round = data.league.round.split(' ').pop()
-      if (isNaN(round)) {
-        return
+      let round = data.league.round.split(' ').pop()
+      if (league === 'BUNDESLIGA' && isNaN(round)) {
+        round = 35
       }
       const tempData = {
         leagueName: league,
@@ -65,6 +64,7 @@ module.exports.handler = async function (event) {
       body: 'Update Fixtures Success!'
     }
   } catch (e) {
+    console.log('ERROR :::', e)
     return {
       statusCode: 200,
       body: e.message

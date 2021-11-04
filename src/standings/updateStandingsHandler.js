@@ -63,6 +63,7 @@ module.exports.handler = async function (event) {
       body: 'Update Standings Success!'
     }
   } catch (e) {
+    console.log('ERROR :::', e)
     return {
       statusCode: 200,
       body: e.message

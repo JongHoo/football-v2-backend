@@ -6,11 +6,11 @@ module.exports.handler = async function (event) {
   const { league, season, option } = event.pathParameters
   console.log('league :::', league)
   console.log('season :::', season)
-  console.log('round :::', option)
+  console.log('option :::', option)
 
   try {
     await commonUtil.connect()
-    const result = isNaN(option) ? await Query.readFixturesByTeam(league, season, option) : await Query.readFixturesByRound(league, season, option)
+    const result = isNaN(option) ? await Query.readFixturesByTeam(league, season, decodeURI(option)) : await Query.readFixturesByRound(league, season, option)
     if (!result?.length) {
       throw new Error('No Data.')
     }

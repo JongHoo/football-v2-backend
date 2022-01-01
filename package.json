@@ -1,0 +1,32 @@
+{
+  "name": "football-v2-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JongHoo/football-v2-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JongHoo/football-v2-backend/issues"
+  },
+  "homepage": "https://github.com/JongHoo/football-v2-backend#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^5.12.9"
+  },
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-standard": "^16.0.3",
+    "serverless": "^1.47.0",
+    "serverless-offline": "^7.0.0"
+  }
+}

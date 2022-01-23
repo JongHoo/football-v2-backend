@@ -34,12 +34,10 @@ module.exports.handler = async function (event) {
     const newFixtureList = []
     await commonUtil.connect()
     responseData.forEach(data => {
-      let round = data.league.round.split(' ').pop()
-      // FIXME: 승강 라운드 처리 필요 (임시로 마지막 라운드+1 처리 함)
-      if (league === 'BUNDESLIGA' && isNaN(round)) {
-        round = 35
-      } else if (league === 'LIGUE1' && isNaN(round)) {
-        round = 39
+      const round = data.league.round.split(' ').pop()
+      // TODO: 승강 플레이오프 저장 방식에 대해서 검토 필요
+      if (isNaN(round)) {
+        return
       }
       const tempData = {
         leagueName: league,

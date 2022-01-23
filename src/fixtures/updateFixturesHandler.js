@@ -35,8 +35,11 @@ module.exports.handler = async function (event) {
     await commonUtil.connect()
     responseData.forEach(data => {
       let round = data.league.round.split(' ').pop()
+      // FIXME: 승강 라운드 처리 필요 (임시로 마지막 라운드+1 처리 함)
       if (league === 'BUNDESLIGA' && isNaN(round)) {
         round = 35
+      } else if (league === 'LIGUE1' && isNaN(round)) {
+        round = 39
       }
       const tempData = {
         leagueName: league,

@@ -16,6 +16,7 @@ module.exports.handler = async function (event) {
       throw new Error('No Data.')
     }
     return {
+      headers,
       statusCode: 200,
       body: JSON.stringify(result)
     }

@@ -24,7 +24,9 @@ functions:
       - http:
           path: standings/{league}/{season}
           method: get
-          cors: true
+          cors:
+            origins:
+              - "https://fs.jh7.kr"
 
   updateTopScorers:
     handler: src/top-scorers/updateTopScorersHandler.handler
@@ -41,7 +43,9 @@ functions:
       - http:
           path: topscorers/{league}/{season}
           method: get
-          cors: true
+          cors:
+            origins:
+              - "https://fs.jh7.kr"
 
   updateFixtures:
     handler: src/fixtures/updateFixturesHandler.handler
@@ -58,4 +62,6 @@ functions:
       - http:
           path: fixtures/{league}/{season}/{option}
           method: get
-          cors: true
+          cors:
+            origins:
+              - "https://fs.jh7.kr"

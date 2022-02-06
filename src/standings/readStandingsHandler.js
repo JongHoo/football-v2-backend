@@ -1,6 +1,7 @@
 'use strict'
 const commonUtil = require('../common/commonUtil')
 const Query = require('./query')
+const { responseHeader: headers } = require('../common/responseUtil')
 
 module.exports.handler = async function (event) {
   const { league, season } = event.pathParameters
@@ -20,6 +21,7 @@ module.exports.handler = async function (event) {
   } catch (e) {
     console.log('ERROR :::', e)
     return {
+      headers,
       statusCode: 500,
       body: e.message
     }

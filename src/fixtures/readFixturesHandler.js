@@ -1,5 +1,6 @@
 'use strict'
 const commonUtil = require('../common/commonUtil')
+const { responseHeader: headers } = require('../common/responseUtil')
 const Query = require('./query')
 
 module.exports.handler = async function (event) {
@@ -21,6 +22,7 @@ module.exports.handler = async function (event) {
   } catch (e) {
     console.log('ERROR :::', e)
     return {
+      headers,
       statusCode: 500,
       body: e.message
     }
